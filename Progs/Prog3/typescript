@@ -1,0 +1,81 @@
+Script started on Thu 07 Apr 2022 07:27:21 PM EDT
+]0;tas_ta@cobra:~/csc245/Progs/Prog3[?1034h[tas_ta@cobra Prog3]$ ./Sample myFile.txti[K./a.out myFile.txtc++ spellChecker.cpp
+]0;tas_ta@cobra:~/csc245/Progs/Prog3[tas_ta@cobra Prog3]$ c++ spellChecker.cpp[1P./Sample myFile.txti[K./a.out myFile.txt
+[2J[1;1H!@#$%^&*(){}	THE SPELL CHECKER PROGRAM	!@#$%^&*(){}
+
+thsi On Line 4 Was Not Found in the Dictionary
+
+A)	Add the Word to Dictionary
+I)	Ignore Word, and Skip Future References
+G)	Go On to Next Word
+S)	Search For A Suggested Spelling
+Q)	Quit Spell Checking File
+
+Selection : a
+
+The Word thsi Has Been Successfully Inserted
+Press Enter to Continue...
+[2J[1;1H!@#$%^&*(){}	THE SPELL CHECKER PROGRAM	!@#$%^&*(){}
+
+fiel On Line 4 Was Not Found in the Dictionary
+
+A)	Add the Word to Dictionary
+I)	Ignore Word, and Skip Future References
+G)	Go On to Next Word
+S)	Search For A Suggested Spelling
+Q)	Quit Spell Checking File
+
+Selection : i
+[2J[1;1H!@#$%^&*(){}	THE SPELL CHECKER PROGRAM	!@#$%^&*(){}
+
+soem On Line 4 Was Not Found in the Dictionary
+
+A)	Add the Word to Dictionary
+I)	Ignore Word, and Skip Future References
+G)	Go On to Next Word
+S)	Search For A Suggested Spelling
+Q)	Quit Spell Checking File
+
+Selection : g
+[2J[1;1H!@#$%^&*(){}	THE SPELL CHECKER PROGRAM	!@#$%^&*(){}
+
+spelling On Line 4 Was Not Found in the Dictionary
+
+A)	Add the Word to Dictionary
+I)	Ignore Word, and Skip Future References
+G)	Go On to Next Word
+S)	Search For A Suggested Spelling
+Q)	Quit Spell Checking File
+
+Selection : g
+[2J[1;1H!@#$%^&*(){}	THE SPELL CHECKER PROGRAM	!@#$%^&*(){}
+
+soem On Line 5 Was Not Found in the Dictionary
+
+A)	Add the Word to Dictionary
+I)	Ignore Word, and Skip Future References
+G)	Go On to Next Word
+S)	Search For A Suggested Spelling
+Q)	Quit Spell Checking File
+
+Selection : s
+Suggested Spelling : some
+
+Press Enter to Return to Menu...
+
+[2J[1;1H!@#$%^&*(){}	THE SPELL CHECKER PROGRAM	!@#$%^&*(){}
+
+soem On Line 5 Was Not Found in the Dictionary
+
+A)	Add the Word to Dictionary
+I)	Ignore Word, and Skip Future References
+G)	Go On to Next Word
+S)	Search For A Suggested Spelling
+Q)	Quit Spell Checking File
+
+Selection : q
+Now Exiting...
+]0;tas_ta@cobra:~/csc245/Progs/Prog3[tas_ta@cobra Prog3]$ exit
+exit
+
+Script done on Thu 07 Apr 2022 07:27:53 PM EDT

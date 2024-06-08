@@ -1,0 +1,99 @@
+PROBLEM AT HAND
+------------------------------------
+To create a dc calculator, aka a reverse-polish desk calculator, that intakes postfix and
+outputs solutions utilizing PEMDAS
+
+Sample Input
+------------------------------------
+2 3 +
+p
+6 - p
+4 6 * + p
+2 / p
+4 % p
+2 100 +
+3 4 5 f
+5d*p
+rf2pc
+
+Sample Output
+------------------------------------
+5
+-1
+23
+11
+3
+5 
+4 
+3 
+102 
+3
+25
+5 
+25 
+4 
+3 
+102 
+3
+2
+
+Algorithm Breakdown
+------------------------------------
+Utilizes IOStream, String, and CSTDLib libraries
+Utilizes stacks.h header file
+
+dc.cpp
+
+  -main()
+    -checks for arguments and catches underflow and overflow errors
+  
+  -parse()
+    -parses through the input recieved from the user and stores it in stacks based on certain criteria including:
+      -a space
+      -being an underscore
+      -being a digit
+      -being an operator
+    -also catches invalid inputs
+  
+  -operate()
+    -a switch statment that handles what each input does
+    
+  -isOperator()
+    -checks whether the inputted char is an available operator
+    
+  -printNoPopNew()
+    -prints the top without popping and adds new line
+  
+  -printPopNoNew()
+    -prints the top and pops, doesn't add a new line
+
+  -print()
+    -prints whole stack without altering, adds new line after every value
+    
+  -clear()
+    -clears stack
+  
+  -duplicate()
+    -duplicates top value
+    
+  -reverse()
+    -reverses top two values
+    
+  -add()
+    -adds by popping first two elements on top of stack
+  
+  -subtract()
+    -subtracts by popping first two elements on top of stack
+
+  -multiply()
+    -multiplies by popping first two elements on top of stack
+    
+  -divides()
+    -divides by popping first two elements on top of stack
+    -checks for dividebyzero() error
+    
+  -mod()
+    -modulates by popping first two elements on top of stack
+    -checks for dividebyzero() error
+    
+    

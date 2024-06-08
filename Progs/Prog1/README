@@ -1,0 +1,97 @@
+PROBLEM AT HAND
+------------------------------------
+To create a text editor with the functionality to edit certain portions of a file and saving changes.
+Editing includes going back and forth through the lines, inserting and deleting lines, and saving changes.
+
+Sample Input
+------------------------------------
+Contained in the testfile file as follows:
+
+This is my first line.
+This is my second line.
+This is my third line.
+
+
+Sample Output
+------------------------------------
+
+L or l to display lines
+P or p to go to previous line
+N or n to go to next line
+I or i to insert line
+D or d to delete line
+H or h to display this help message again
+
+1> This is my first line.
+2> This is my second line.
+3> This is my third line.
+3> p
+2> n
+3> d
+2> l
+
+1> This is my first line.
+2> This is my second line.
+2> i
+3> inserted text
+3> l
+
+1> This is my first line.
+2> This is my second line.
+3> inserted text
+3> e
+
+(Code works with both uppercase and lowercase letters)
+
+
+
+Algorithm Breakdown
+------------------------------------
+editor.cpp (client file)
+  
+  -main()
+    -checks for arguments and displays errors accordingly
+  
+  -readFile()
+    Reads a file to output as text editor onto the command line
+  
+  -setFile()
+    Overwrites the file with the changes made by the client
+  
+  -readInput()
+    Uses a switch statement in order to determine what to execute from the implementation file.
+    A switch statment is much more optimized to detect input compared to an if statement that needs to be asked for a condition everytime.
+  
+linelist.cpp (implementation file)
+
+  -goToTop()
+    Changes where the currLine is pointing to the top line of the file
+  
+  -goToBottom()
+    Changes where the currLine is pointing to the bottom line of the file utilizing length variable
+     
+  -insertLine()
+    Inserts a line written by the user by changing where the line is pointing to. Changes line its next and back to the currLine's front and back nodes.
+    
+  -deleteLine()
+    Deletes a line by readjusting the back and next pointers of the nodes next to the deleting line to each other. Checks what line it is on with currLineNum.
+    This allows us to identify the first line, so we dont link the pointer to an unknown address which would give a segmentation fault.
+    
+  -printList()
+    Prints the lines into the console window for client viewing by looping through the list by utilizing currLineNum in a for loop
+    
+  -getCurrLine()
+    A getter for currLine information
+    
+  -moveNextLine()
+    Changes currLine pointer to its next node and increments currLineNum
+  
+  -movePrevLine()
+    Changes currLine pointer to its next node and decrements currLineNum
+    
+  -getCurrLineNum()
+    getter for currLineNum
+    
+  -getLength()
+    getter for length of list
+    

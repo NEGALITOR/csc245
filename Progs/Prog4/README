@@ -1,0 +1,78 @@
+PROBLEM AT HAND
+------------------------------------
+To create a summary table that desplays the shortest paths from one destination 
+to another by utilizing graphs and Dijkstra's algorithm
+
+Sample Run
+------------------------------------
+
+^^^^^^^^^^^^^^^^        DIJKSTRA'S ALGORITHM    ^^^^^^^^^^^^^^^^
+
+A Weighted Graph Has Been Built For These 7 Vertices:
+
+           Atlanta            Austin           Chicago
+            Dallas            Denver           Houston
+        Washington
+
+Please input your starting vertex: Washington
+
+-----------------------------------------------------------------------
+
+        Vertex          Distance       Previous
+
+    Washington                 0             N/A
+       Atlanta               600      Washington
+        Dallas              1300      Washington
+       Houston              1400         Atlanta
+        Austin              1500          Dallas
+        Denver              2080          Dallas
+       Chicago              2200          Dallas
+
+-----------------------------------------------------------------------
+
+Algorithm Breakdown
+------------------------------------
+Utilizes String, IOStream, FStream, CSTDLib, IOManip, CLimits libraries
+Utilizes Queue, Graph, HashTable headers
+
+dijkstra.cpp
+  
+  -VertexType struct
+    Creates a new data type that allows us to store a location's name, prev location, distance, and whether or not it is marked
+    
+  -main()
+    -Runs the program
+    -Checks for invalid argument entry
+    -Initilizes variables for use
+    
+  -buildGraph()
+    -Builds the graph by reading the file and a delimiter of ';'
+    -Assigns each city with its name, distance as INT_MAX, and marked as false for default
+    -Inserts it into as an edge of the graph with the weight
+    
+  -dijkstra()
+    -Performs Dijkstra's algorithm on the graph
+    -Initilizes a queue and variables and sets the first destination as the cities name, distance as 0, and marked as true
+    -While a vertex has not been marked, it will push it to queue, calculate the total distance, and dequeue
+    -Determines if the distance is the minimmum and sets it to the current index
+    -Mark the current index as true for future reference
+    -Utilizes checkArray() if the city has been seen, checkMarked() to determine if vertex has been flagged before, and getCityIndex for a city's location
+    
+  -checkArray()
+    -Checks if current city is in the cities array
+    
+  -checkMarked()
+    -Checks if city has been marked as visited in VertexType array
+    
+  -getCityIndex()
+    -Gets the index of current city in VertexType array
+  
+  -menu()
+    -Sets up the GUI
+    
+  -printR
+    -Prints the row and its attributes to console
+    
+    
+    
+    

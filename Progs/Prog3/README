@@ -1,0 +1,137 @@
+PROBLEM AT HAND
+------------------------------------
+To create a spell checker that is able to detect mispellings within a file by
+parsing and manipulating words and comparing them to a hash table.
+
+Sample Run
+------------------------------------
+!@#$%^&*(){}    THE SPELL CHECKER PROGRAM       !@#$%^&*(){}
+
+fiel On Line 4 Was Not Found in the Dictionary
+
+A)      Add the Word to Dictionary
+I)      Ignore Word, and Skip Future References
+G)      Go On to Next Word
+S)      Search For A Suggested Spelling
+Q)      Quit Spell Checking File
+
+Selection : s
+Suggested Spelling : file
+
+Press Enter to Return to Menu...
+
+!@#$%^&*(){}    THE SPELL CHECKER PROGRAM       !@#$%^&*(){}
+
+fiel On Line 4 Was Not Found in the Dictionary
+
+A)      Add the Word to Dictionary
+I)      Ignore Word, and Skip Future References
+G)      Go On to Next Word
+S)      Search For A Suggested Spelling
+Q)      Quit Spell Checking File
+
+Selection : a
+
+The Word fiel Has Been Successfully Inserted
+Press Enter to Continue...
+
+!@#$%^&*(){}    THE SPELL CHECKER PROGRAM       !@#$%^&*(){}
+
+soem On Line 4 Was Not Found in the Dictionary
+
+A)      Add the Word to Dictionary
+I)      Ignore Word, and Skip Future References
+G)      Go On to Next Word
+S)      Search For A Suggested Spelling
+Q)      Quit Spell Checking File
+
+Selection : i
+
+!@#$%^&*(){}    THE SPELL CHECKER PROGRAM       !@#$%^&*(){}
+
+spelling On Line 4 Was Not Found in the Dictionary
+
+A)      Add the Word to Dictionary
+I)      Ignore Word, and Skip Future References
+G)      Go On to Next Word
+S)      Search For A Suggested Spelling
+Q)      Quit Spell Checking File
+
+Selection : g
+
+!@#$%^&*(){}    THE SPELL CHECKER PROGRAM       !@#$%^&*(){}
+
+spelling On Line 5 Was Not Found in the Dictionary
+
+A)      Add the Word to Dictionary
+I)      Ignore Word, and Skip Future References
+G)      Go On to Next Word
+S)      Search For A Suggested Spelling
+Q)      Quit Spell Checking File
+
+Selection : q
+Now Exiting...
+
+Algorithm Breakdown
+------------------------------------
+Utilizes IOStream, Vector, FStream, String, CString, Algorithm libraries
+Utilizes HashTable and BinarySearchTree headers
+
+spellChecker.cpp
+
+  -BNode struct and operator <<
+    -BNode declares nodes that allow us to store info in them
+    -operator << allows us to manipulate and input data from the nodes into a variable
+    
+  -main()
+    -Runs our program
+    -Checks for arguments and runs accordingly
+    -Creates a couple of variables including HashTables for dictionary
+    
+  -menu()
+    -Displays the GUI
+    -Manages input by the client and outputs
+    
+  -readInDict()
+    -Inputs the dict.txt file into a HashTable
+  
+  -checkWord()
+    -Takes in the content and detects if the input line is a word or not
+    -Goes through the line checking each position whether or not it contains a symbol
+    -If there is a symbol, cut it off
+    -If it is a word, lower case it and check in dictionary (uses inDict())
+    -If not a word, skip it
+    -If the word is not in the dictionary, put it into the BST tree (uses addToTree())
+    
+  -addToTree()
+    -Adds non-dictionary words into BST as a BNode
+    
+  -inDict()
+    -Checks if the word is part of the dicitonary or ignored word list
+    
+  -swap()
+    -Manipulates the word to cross compare with the dicitonary to check if it is a misspelling and suggests a word
+    -Iterates through the word and keeps swapping places between letters
+    -Then checks if the word is in the dictionary (uses inDict())
+    
+  -split()
+    -splits the sentence up into each word
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
