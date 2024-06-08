@@ -1,1 +1,1 @@
-# csc245
+# Data Structures & Algorithms
